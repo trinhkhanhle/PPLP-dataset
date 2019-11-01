@@ -1,6 +1,43 @@
 # FCAV M-Air Pedestrian (FMP), CMU Panoptic, and Orientation Datasets for PPLP
 
-This repository contains a complete FCAV M-Air Pedestrian (FMP) dataset, the code to generate a dataset that contains 2D LiDAR data and camera color images from CMU Panoptic dataset, and the code to generate Orientation dataset, which are used by PPLP for training, testing and validation, to detect 3D locations and orientations of pedestrians. We require datasets to be arranged in KITTI format. The following are steps to get the data:
+This repository contains a complete FCAV M-Air Pedestrian (FMP) dataset, the code to generate a dataset that contains 2D LiDAR data and camera color images from CMU Panoptic dataset, and the code to generate Orientation dataset, which are used by PPLP for training, testing and validation, to detect 3D locations and orientations of pedestrians. We require datasets to be arranged in KITTI format and the folder structure should like the following:
+
+```
+Kitti
+└── object
+    ├── testing
+    │   ├── calib
+    │   │   ├── xxxxxx.txt
+    │   │   └── xxxxxx.txt
+    │   ├── rgb_images
+    │   │   ├── xxxxxx.png
+    │   │   └── xxxxxx.png
+    │   └── lidar_ptclouds
+    │       ├── xxxxxx.ply
+    │       └── xxxxxx.ply
+    ├── training
+    │   ├── calib
+    │   │   ├── xxxxxx.txt
+    │   │   └── xxxxxx.txt
+    │   ├── rgb_images
+    │   │   ├── xxxxxx.png
+    │   │   └── xxxxxx.png
+    │   ├── label_2
+    │   │   ├── xxxxxx.txt
+    │   │   └── xxxxxx.txt
+    │   ├── planes
+    │   │   ├── xxxxxx.txt
+    │   │   └── xxxxxx.txt
+    │   └── lidar_ptclouds
+    │       ├── xxxxxx.ply
+    │       └── xxxxxx.ply
+    ├── train.txt
+    └── val.txt
+```
+
+
+
+The following are steps to generate the data:
 
 ### FMP dataset
 
